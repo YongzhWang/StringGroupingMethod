@@ -3,7 +3,7 @@ pd.set_option('display.max_columns', None)
 from geopy.geocoders import Nominatim
 import geopy
 import time
-dist=pd.read_csv("[4-006]SCHOOL_LAT_LONG.csv")
+dist=pd.read_csv("SampleSchoolData.csv")
 
 
 locationlist=[]
