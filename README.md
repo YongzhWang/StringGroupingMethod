@@ -1,14 +1,21 @@
 # StringGroupingMethod
 
-The purpose of this repository is to share a string similarity grouping method I researched and developed with Jccard-Index. Online, there are lots of information related to clustering strings with Jccard-Index but none has developed a method in Python that actually puts the Jccard-Index into application. K-means clustering also works but it requires indication of number of groups which can be inefficient.
+This repository is dedicated to sharing a string similarity grouping method that I have researched and developed using the Jaccard Index. While there is a plethora of information online about clustering strings with the Jaccard Index, I found a gap in practical Python implementations. My method, detailed here, fills this gap by providing a hands-on approach. Although K-means clustering is another viable technique, it requires specifying the number of groups upfront, which may not always be efficient.
 
-I will show my method with an application of classifying Medical Schools which I used for my economics research. In the data file, we already have three important variables Longtitude, Latitude, and School name. Our aim is to cluster the repeated schools. However, given the data came from surveys, the names of school often do not exactly match. Thus, we need a fuzzy type matching. My approach was first gain the address of these schools using geopy library to reverse from the Longitude and Latitude, as those addresses are longer and thus more accurate than just the school names. Then, I did a rough grouping by using very close Longitude and Latitude at the integer level. Within these groups, I applied the Jccard-Index at a threshold of 70%. The results are quite impressive and accurate.
+The method is showcased through the classification of Medical Schools, a task undertaken as part of my economics research. The dataset includes three key variables: longitude, latitude, and school name. The challenge was to cluster repeated school entries, which was complicated by variations in school names due to the survey-based nature of the data. To address this, my approach involved two steps:
 
+Address Retrieval: Using the geopy library to convert longitude and latitude into detailed addresses, offering more precision than school names alone.
+Clustering: Implementing an initial rough grouping based on closely matching longitude and latitude (rounded to integers). Within these groups, I applied the Jaccard Index with a 70% threshold. The accuracy and precision of the results were impressive.
 
-This repository contains two main codes and a data files:
-"StringSimilarityCode.ipynb" is the file of the Jccard-Index and classification.
-"SampleSchoolData.csv" is the sample data file
-"GeopyLatLong.py" is the file to reverse Lat and Long to address.
-""
+Repository Contents
+
+StringSimilarityCode.ipynb: This Jupyter notebook contains the implementation of the Jaccard Index method and the classification process.
+SampleSchoolData.csv: A sample dataset used in the application.
+GeopyLatLong.py: A Python script for converting latitude and longitude into addresses.
+Distribution_JaccardScore2.jpg: A visual representation showing the distribution of match scores across the dataset.
+
+Feel free to explore the repository and utilize these resources in your projects.
+
+Andrew
 
 
