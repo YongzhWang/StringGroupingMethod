@@ -4,10 +4,10 @@ This repository is dedicated to sharing a string similarity grouping method that
 
 The method is showcased through the classification of Medical Schools, a task undertaken as part of my economics research. The dataset includes three key variables: longitude, latitude, and school name. The challenge was to cluster repeated school entries, which was complicated by variations in school names due to the survey-based nature of the data. To address this, my approach involved two steps:
 
-Address Retrieval: Using the geopy library to convert longitude and latitude into detailed addresses, offering more precision than school names alone.
-Clustering: Implementing an initial rough grouping based on closely matching longitude and latitude (rounded to integers). Within these groups, I applied the Jaccard Index with a 70% threshold. The accuracy and precision of the results were impressive.
+**Address Retrieval**: Using the geopy library to convert longitude and latitude into detailed addresses, offering more precision than school names alone.
+**Clustering**: Implementing an initial rough grouping based on closely matching longitude and latitude (rounded to integers). Within these groups, I applied the Jaccard Index with a 70% threshold. The accuracy and precision of the results were impressive.
 
-Repository Contents
+**Repository Contents**
 
 StringSimilarityCode.ipynb: This Jupyter notebook contains the implementation of the Jaccard Index method and the classification process.
 SampleSchoolData.csv: A sample dataset used in the application.
